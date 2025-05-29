@@ -1,0 +1,285 @@
+.header {
+    display: flex; /* Active Flexbox */
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: space-between; /* Répartit les éléments horizontalement */
+    padding: 1% 3%; /* Ajoute un espacement interne */
+    position: fixed; /* Nécessaire pour le positionnement absolu du logo */
+    top: 0; /* Position initiale */
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000; /* Assure que le header reste au-dessus */
+    background-color: rgba(0, 0, 0, 1); /* Fond semi-transparent */
+    /* transition: transform 0.3s ease, opacity 0.3s ease; Transition pour le mouvement et la disparition */
+    transition: opacity 0.5s ease; /* Transition fluide pour l'opacité */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.header.scrolled {
+   opacity: 0; /* Rend le header transparent */
+}
+
+.header .left,
+.header .right {
+    flex: 1; /* Les conteneurs gauche et droit prennent de l'espace */
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+}
+
+.header .left {
+    justify-content: flex-start; /* Aligne le titre à gauche */
+}
+
+.header .right {
+    justify-content: flex-end; /* Aligne le lien à droite */
+}
+
+
+.header .center {
+    flex: 0; /* Le conteneur central ne prend pas d'espace supplémentaire */
+    position: absolute;
+	left: 50%;
+	transform: translateX(-50%); /* Centre le logo horizontalement */
+}
+
+.banniere {
+    
+    width: 100%; /* La bannière prend toute la largeur de l'écran */
+    height: 100vh; /* Hauteur de la bannière */
+    background-image: 
+        radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 1) 200%),
+        url('Fond_debris.png'); /* Image de fond de la bannière */
+    background-size: cover; /* Couvre toute la zone de la bannière */
+    background-position: center top; /* Centre l'image dans la bannière */
+    background-attachment: scroll; /* Fixe l'image de fond */
+
+
+    display: flex; /* Active Flexbox */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    text-align: center; /* Centre le texte */
+    color: white; /* Assure que le texte est visible */
+    line-height:1.1; /* Réduit l'espacement vertical entre les lignes */
+
+}
+
+.banniere .entropic {
+    font-size: 6em; /* Taille pour "ENTROPIC" */
+    font-family: "Orbitron", sans-serif ; /* Police du texte */
+    font-weight: 550 /* Gras pour le rendre plus imposant */
+}
+
+.banniere .games {
+    font-size: 2em; /* Taille plus petite pour "GAMES" */
+    font-weight: 400; /* Poids plus léger */
+    font-family: "Orbitron", sans-serif ; /* Police du texte */
+    text-align: center; /* Centre le texte */
+    display: block; /* Affiche le texte sur une nouvelle ligne */
+}
+
+body {
+    margin : 0; /* Enlève les marges par défaut du navigateur */
+    background-color: black; /* Le fond de la page sera noir */
+    color: white; /* Le texte de la page sera blanc */
+    text-align: center;
+}
+
+.block {
+    width: 100%;           /* Prend toute la largeur de la fenêtre */
+    margin: 80px auto;             /* Aucun espacement autour */
+    /* padding: 60px 0;        Espacement vertical uniquement */
+    border-radius: 0;       /* Pas d'arrondi */
+    box-sizing: border-box;
+    
+    
+}
+
+.block-titleRounded {
+    width: 100%;           /* Prend toute la largeur de la fenêtre */
+    margin: auto;             /* Aucun espacement autour */
+    margin-top: 10% ;
+    margin-bottom: 5% ;
+    /* padding: 60px 0;        Espacement vertical uniquement */
+    border-radius: 0;       /* Pas d'arrondi */
+    box-sizing: border-box;
+}
+
+.block > * {
+    width: 83%;  /* Le contenu (h2, p, etc.) prend 70% de la largeur */
+    padding: 20px 0; /* Ajoute un espacement vertical */
+    margin-left: auto;
+    margin-right: auto;
+       
+}
+
+
+.block-rounded {
+    width: 96%;
+    margin: 2.5% auto; /* Centre le bloc */
+    border-radius: 20px;         /* Bords bien arrondis */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Espace entre le texte et l'image */
+    background: #081621; 
+}
+
+.block-rounded-text {
+    width: 70%; /* Ajuste selon ton besoin */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+    
+.block-rounded-img {
+    width: 16%; /* Ajuste selon ton besoin */
+}
+
+.block-rounded-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+}
+
+/* Variante : couleur différente */
+.block-rounded-alt {
+    background: #0C0D0B;
+}
+
+/* Pour les blocs de l'equipe */
+
+.blocks-row {
+    display: flex;
+    justify-content:center; /* centre la rangée sur la page */
+}
+
+.blocks-row .block {
+    width: 40%; /* ou une largeur adaptée pour tenir sur la ligne */
+    margin: 2%;  /* retire le margin auto si présent sur .block */
+    padding: 2% 0; /* ajoute un espacement autour */
+    border-radius: 10%; 
+    background: #151514
+}
+.blocks-row .block img {
+    width: 30%;    /* 10% de la largeur de l'écran */
+    height: auto;   /* Garde les proportions */
+    max-width: 100%; /* Empêche de dépasser le bloc */
+    display: block;  /* Pour éviter les espaces indésirables */
+}
+.blocks-row .block h2 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #2AEAFF; /* Couleur du texte */
+    text-align: center; /* Centre le titre */
+    margin-bottom: 0;
+    padding-bottom: 0.3%;
+}
+
+.blocks-row .block h3 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #ffffff; /* Couleur du texte */
+    text-align: center; /* Centre le titre */
+    margin-top: 0;
+}
+
+/* Pour les titres du bandeau du haut */
+p.title {
+    font-size: 1.2em;
+    font-family: Orbitron;
+    margin: 0; /* Ajoute un espacement à gauche */
+}
+
+a{
+    font-size: 1em;
+    font-family: Manrope;
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Enlève le soulignement par défaut */
+}
+
+a:hover{
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.4em;
+    text-align: center; /* Centre le titre */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5vw;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+    
+p {
+    font-size: 1.2em;
+    font-family: "Orbitron";
+    text-align: justify; /* Justifie le texte */
+    font-weight: normal;
+}
+
+p.bold {
+    font-weight: bold;
+}
+    
+li {
+    font-size: 1em;
+    font-family: "Orbitron", sans-serif;
+    
+}
+
+ul {
+    text-align: center; /* Centre le contenu des éléments de liste */
+    list-style-position: inside; /* Place les puces à l'intérieur du conteneur */
+    justify-content: left; /* Aligne le contenu à gauche */
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centre horizontalement */
+    text-align: center;
+    font-size: 0.8em;
+    font-family: Orbitron, sans-serif;
+    margin: 30px 0; /* Ajoute un espacement vertical */
+
+}
+
+footer div {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+    margin: 0.2em 0;
+}
+
+.footer-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* espace entre les logos */
+    margin-bottom: 8px;
+}
+
+
+
+
+

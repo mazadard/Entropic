@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+        <title>Entropic games</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    
+        <script defer>
+            let lastScrollY = 0;
+        
+            document.addEventListener('scroll', function () {
+                const header = document.querySelector('.header');
+                const banniere = document.querySelector('.banniere');
+                const scrollY = window.scrollY;
+        
+                // Gestion du header
+                if (scrollY > 100 && scrollY > lastScrollY) {
+                    // Si on défile vers le bas et qu'on dépasse 50px
+                    header.classList.add('scrolled');
+                } else if (scrollY < lastScrollY) {
+                    // Si on défile vers le haut
+                    header.classList.remove('scrolled');
+                }
+        
+                // Effet parallaxe pour la bannière
+                if (banniere) {
+                    banniere.style.backgroundPosition = `center ${scrollY * 0.5}px`;
+                }
+        
+                lastScrollY = scrollY; // Met à jour la dernière position de scroll
+            });
+        </script>
+    </head>
+
+    <body>
+        
+        <div class="header">
+            <div class="left">
+                <p class="title">ENTROPIC GAMES</p>
+            </div>
+            <div class="center">
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/04/logo_entropic_white.png" alt="Logo d'Entropic games" width="35" height="35">
+            </div>
+            <div class="right">
+                <a href="a-propos.html">A propos</a>
+            </div>
+        </div>
+
+        <div class="banniere">  
+            <p> 
+                <span class="entropic">ENTROPIC </span>
+                <br>
+                <span class="games"> GAMES </span>
+            </p>
+        </div>
+
+        <!-- Ici sont les blocs de section -->
+
+        <div class="block">
+            <h1>Qui Sommes nous</h1>
+            <p>
+                Fondée en Janvier 2025, Le Studio Entropic game avec la volonté de produire des éxperiences unique avec notamment un travail artistique et musicale authentique.
+                Dans notre studio de jeux vidéo, nous nous engageons à créer des expériences de jeu distinctives et soigneusement conçues, avec une attention particulière portée
+                aux systèmes de progression riches de sens. Nous nous concentrons sur le développement de jeux roguelike et tactiques, offrant profondeur, rejouabilité et une aventure unique à chaque partie.
+            </p>
+        </div>
+
+        <div class="block-rounded">
+            <div class="block-rounded-text">
+                <h1>Notre philosophie</h1>
+                <p>
+                    Nous sommes passionnés par la création de mondes riches et détaillés, peuplés de personnages mémorables et d'histoires captivantes.
+                    Nous nous efforçons de créer des jeux qui ne sont pas seulement amusants à jouer, mais qui laissent également une impression durable sur les joueurs.
+                    Nous croyons que les jeux vidéo peuvent être un moyen puissant de raconter des histoires et d'explorer des thèmes profonds et que dans ce contexte l'UX design a un rôle fondamental pour accompagné le joueurs le plus naturellement possible vers une immerssion totale.
+                </p>
+            </div>
+            <div class="block-rounded-img">
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/05/mc_futur_2.png" alt="Image à droite" />
+            </div>
+        </div>
+
+        <div class="block-rounded block-rounded-alt">
+            <div class="block-rounded-img">
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/05/mc_female_older.png" alt="Image à gauche" />
+            </div>
+
+            <div class="block-rounded-text">
+                <h1>Project Leya</h1>
+                <p>
+                    Project Leya est un jeu vidéo en développement mêlant science-fiction, rogue-lite et tactique, fortement inspiré de Terra Battle.
+                     Il plonge les joueurs dans un monde dystopique ravagé par un conflit sans fin entre deux factions rivales : l'une puise son pouvoir dans une magie ancienne utilisée comme source d'énergie, tandis que l'autre repose sur une technologie avancée. 
+                     Leur affrontement a conduit à un cataclysme apocalyptique, bouleversant l'équilibre du monde. Dans ce chaos, le joueur devra naviguer des combats stratégiques dynamiques et faire des choix cruciaux pour survivre et découvrir la vérité derrière cette guerre dévastatrice.
+                </p>
+            </div>     
+        </div>
+
+        <div class="block-titleRounded">
+            <h1>The Entropic Team</h1>
+        </div>
+
+        <div class="blocks-row">
+            <div class="block">
+                
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/03/photo-robin-1.png" alt="Image à gauche" />
+
+                <h2> ROBIN LE CONTE DES FLORIS</h2>
+                <h3>CEO & CREATIVE DIRECTOR</h3>
+                <p>
+                    Passionnate gamer, fan of tacticals,  Robin worked in various UX project before creating Entropic Games with Lucas.
+                    <br><br>Favorites games: Terra Battle, dead cells, Halo 3: ODST  
+                </p>
+            </div>
+            
+            <div class="block">
+                
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/03/photo-lucas-2.png" alt="Image à gauche" />
+
+                <h2>LUCAS TILLARD</h2>
+                <h3>COO & PRODUCER</h3>
+                <p>
+                Passionnate gamer, fan of tacticals,  Robin worked in various UX project before creating Entropic Games with Lucas.
+                <br><br>Favorites games: Terra Battle, dead cells, Halo 3: ODST    
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="blocks-row">
+            <div class="block">
+                
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/05/damien.png" alt="Image à gauche" />
+
+                <h2>DAMIEN LEDOUX</h2>
+                <h3>MUSIC COMPOSER</h3>
+                <p>
+                Damien a toujours été passionné par la musique et les jeux video. 
+                Il a produit de la musique pendant 15 ans en tant qu’artiste indépendant.
+                <br><br>Favorites games: Terra Battle, dead cells, Halo 3: ODST    
+                </p>
+            </div>
+            
+            <div class="block">
+                
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/05/rizvan.png" alt="Image à gauche" />
+
+                <h2>RIZVAN ZOUKHAIEV</h2>
+                <h3>ART DIRECTOR</h3>
+                <p>
+                Carré comme un économiste, rêveur comme un artiste, Rizvan s'est investi dans de nombreux projets en tant que Illustrateur
+                passionné. 
+                <br><br>Favorites games: Terra Battle, dead cells, Halo 3: ODST    
+                </p>
+            </div>        
+        </div>
+         
+        <footer>
+            <div class="footer-logos">
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/04/linkedin_logo_initials.png" alt="Logo linkedin" width="20" height="20">
+                <img src="https://odysenstudio.wordpress.com/wp-content/uploads/2025/04/xlogo.jpg" alt="Logo X" width="20" height="20">
+            </div>
+            
+            <div >     
+                <p>&copy; 2025 by Entropic Games.</p>
+                <p>Tous droits réservés</p> 
+            </div>
+        </footer>
+
+    </body>
+    
+
+</html>

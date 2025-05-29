@@ -1,0 +1,106 @@
+
+
+.header {
+    display: flex; /* Active Flexbox */
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: space-between; /* Répartit les éléments horizontalement */
+    padding: 1% 3%; /* Ajoute un espacement interne */
+    position: relative; /* Nécessaire pour le positionnement absolu du logo */
+}
+
+.header .left,
+.header .right {
+    flex: 1; /* Les conteneurs gauche et droit prennent de l'espace */
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+}
+
+.header .left {
+    justify-content: flex-start; /* Aligne le titre à gauche */
+}
+
+.header .right {
+    justify-content: flex-end; /* Aligne le lien à droite */
+}
+
+
+.header .center {
+    flex: 0; /* Le conteneur central ne prend pas d'espace supplémentaire */
+    position: absolute;
+	left: 50%;
+	transform: translateX(-50%); /* Centre le logo horizontalement */
+}
+
+
+.banniere {
+    width: 100%; /* La bannière prend toute la largeur de l'écran */
+    height: 200px; /* Hauteur de la bannière */
+    background-image: url('Fond_debris.png'); /* Image de fond de la bannière */
+    background-size: cover; /* Couvre toute la zone de la bannière */
+    background-position: center; /* Centre l'image dans la bannière */
+    position: relative; /* Nécessaire pour le positionnement absolu du texte */
+}
+
+body {
+    background-color: black; /* Le fond de la page sera noir */
+    color: white; /* Le texte de la page sera blanc */
+    text-align: center;
+}
+
+p.title {
+    font-size: 1.5em;
+    font-family: Montserra;
+    margin: 0; /* Ajoute un espacement à gauche */
+}
+
+a{
+    font-size: 1em;
+    font-family: Manrope;
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Enlève le soulignement par défaut */
+}
+
+a:hover{
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+
+h1 {
+    font-family: Montserra;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: Montserra;
+    font-size: 1.em;
+}
+
+    
+p {
+    font-size: 1.1em;
+    font-family: Manrope;
+}
+
+p.bold {
+    font-weight: bold;
+}
+    
+li {
+    font-size: 1em;
+    font-family: Manrope;
+    
+}
+
+ul {
+    text-align: center; /* Centre le contenu des éléments de liste */
+    list-style-position: inside; /* Place les puces à l'intérieur du conteneur */
+    justify-content: left; /* Aligne le contenu à gauche */
+}
+
+footer {
+    font-size: 0.8em;
+    font-family: Manrope;
+    text-align: center;
+    margin-top: 20px;
+}
