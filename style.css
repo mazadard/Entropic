@@ -66,7 +66,8 @@
 .banniere .entropic {
     font-size: 6em; /* Taille pour "ENTROPIC" */
     font-family: "Orbitron", sans-serif ; /* Police du texte */
-    font-weight: 550 /* Gras pour le rendre plus imposant */
+    font-weight: 550; /* Gras pour le rendre plus imposant */
+    letter-spacing: 0em; /* Ajuste l'espacement des lettres */
 }
 
 .banniere .games {
@@ -75,6 +76,7 @@
     font-family: "Orbitron", sans-serif ; /* Police du texte */
     text-align: center; /* Centre le texte */
     display: block; /* Affiche le texte sur une nouvelle ligne */
+    letter-spacing: 0;
 }
 
 body {
@@ -202,6 +204,7 @@ p.title {
     font-size: 1.2em;
     font-family: Orbitron;
     margin: 0; /* Ajoute un espacement à gauche */
+    letter-spacing: 0em;
 }
 
 a{
@@ -225,12 +228,14 @@ h1 {
     margin-right: auto;
     margin-bottom: 2.5vw;
     font-weight: 500;
+    letter-spacing: 0em;
 }
 
 h2 {
     font-family: "Orbitron", sans-serif;
     font-size: 1.8em;
     font-weight: 500;
+    letter-spacing: 0em;
 }
 
     
@@ -239,6 +244,7 @@ p {
     font-family: "Orbitron";
     text-align: justify; /* Justifie le texte */
     font-weight: normal;
+    letter-spacing: 0.1em;
 }
 
 p.bold {
