@@ -338,6 +338,7 @@ footer p {
     }
     p, li {
         font-size: 1em;
+        text-align: center; /* Justifie le texte */
     }
 }
 
