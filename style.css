@@ -2,13 +2,12 @@
     display: flex; /* Active Flexbox */
     align-items: center; /* Centre verticalement les éléments */
     justify-content: space-between; /* Répartit les éléments horizontalement */
-    padding: 1% 3%; /* Ajoute un espacement interne */
+    padding: 0.5% 3%; /* Ajoute un espacement interne */
     position: fixed; /* Nécessaire pour le positionnement absolu du logo */
     top: 0; /* Position initiale */
     width: 100%; /* Prend toute la largeur */
     z-index: 1000; /* Assure que le header reste au-dessus */
     background-color: rgba(0, 0, 0, 1); /* Fond semi-transparent */
-    /* transition: transform 0.3s ease, opacity 0.3s ease; Transition pour le mouvement et la disparition */
     transition: opacity 0.5s ease; /* Transition fluide pour l'opacité */
     box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
@@ -34,10 +33,13 @@
 
 
 .header .center {
-    flex: 0; /* Le conteneur central ne prend pas d'espace supplémentaire */
-    position: absolute;
-	left: 50%;
-	transform: translateX(-50%); /* Centre le logo horizontalement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* Le conteneur central ne prend pas d'espace supplémentaire */
+    position: static; /* Enlève le positionnement absolu */
+    left: auto;
+    transform: none; /* Centre le logo horizontalement */
 }
 
 .banniere {
@@ -46,7 +48,7 @@
     height: 100vh; /* Hauteur de la bannière */
     background-image: 
         radial-gradient(circle, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 1) 200%),
-        url('Fond_debris.png'); /* Image de fond de la bannière */
+        url('https://odysenstudio.wordpress.com/wp-content/uploads/2025/05/fond_debris.png'); /* Image de fond de la bannière */
     background-size: cover; /* Couvre toute la zone de la bannière */
     background-position: center top; /* Centre l'image dans la bannière */
     background-attachment: scroll; /* Fixe l'image de fond */
@@ -76,6 +78,7 @@
 }
 
 body {
+    font-size: 16px;
     margin : 0; /* Enlève les marges par défaut du navigateur */
     background-color: black; /* Le fond de la page sera noir */
     color: white; /* Le texte de la page sera blanc */
@@ -145,8 +148,14 @@ body {
     background: #0C0D0B;
 }
 
-/* Pour les blocs de l'equipe */
 
+
+
+
+
+
+
+/* Pour les blocs de l'equipe */
 .blocks-row {
     display: flex;
     justify-content:center; /* centre la rangée sur la page */
@@ -165,6 +174,10 @@ body {
     max-width: 100%; /* Empêche de dépasser le bloc */
     display: block;  /* Pour éviter les espaces indésirables */
 }
+
+
+
+
 .blocks-row .block h2 {
     font-family: "Orbitron", sans-serif;
     font-weight: 400;
@@ -280,6 +293,108 @@ footer p {
 }
 
 
+
+
+
+@media (max-width: 800px) {
+    .header {
+        padding: 2% 4%;
+    }
+    .header .center img {
+        width: 32px;
+        height: 32px;
+    }
+    .header .left .title {
+        font-size: 0.8em;
+    }
+    .header .right a {
+        font-size: 0.8em;
+    }
+}
+
+
+@media (max-width: 800px) {
+    body {
+        font-size: 12px;
+    }
+    .banniere .entropic {
+        font-size: 3.5em;
+    }
+    .banniere .games {
+        font-size: 1.5em;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    p, li {
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .block-rounded-text {
+        padding-left: 6vw;
+        padding-right: 6vw;
+        box-sizing: border-box;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .block-rounded{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 4% 0;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .block-rounded.block-rounded-alt {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    .block-rounded-text{
+        width: 100%;
+        margin: 0;
+        margin-bottom: -1%; /* Ajuste la marge pour éviter l'espace vide */
+    }
+    .block-rounded-img {
+        width: 70%;
+        margin: 0;
+    }
+    .block-rounded-img {
+        margin-top: 0px;
+    }
+    .block-rounded-img img {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+/* pour mobile */
+
+@media (max-width: 800px) {
+    .blocks-row {
+        flex-direction: column;
+        align-items: center; /* Centre les blocs sur mobile */
+    }
+    .blocks-row .block {
+        width: 90%;
+        margin: 4% 0;
+        border-radius: 8%;
+    }
+    .blocks-row .block img {
+        width: 50%;
+    }
+}
 
 
 
